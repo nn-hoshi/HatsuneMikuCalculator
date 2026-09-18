@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKU Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+
+    <h1>MIKU CALCULATOR v1.0.</h1>
+
+    <input
+            type="text"
+            id="display"
+            placeholder="ENTER..."
+    >
+
+    <div class="buttons">
+
+        <div class="top-row">
+
+            <button id="delete" class="danger">C</button>
+            <button id="erase" class="danger">⌫</button>
+
+            <button id="left" class="special">(</button>
+            <button id="right" class="special">)</button>
+
+        </div>
+
+        <div class="middle-layout">
+
+            <div class="numbers-panel">
+
+                <button id="seven" class="number">7</button>
+                <button  id="eight" class="number">8</button>
+                <button id="nine" class="number">9</button>
+
+                <button id="four" class="number">4</button>
+                <button id="five" class="number">5</button>
+                <button id="six" class="number">6</button>
+
+                <button id="one" class="number">1</button>
+                <button id="two" class="number">2</button>
+                <button id="three" class="number">3</button>
+
+                <button id="zero" class="number">0</button>
+                <button id="dot" class="number">.</button>
+                <button id="root" class="special">√</button>
+
+            </div>
+
+            <div class="operators-panel">
+
+                <button id="divide" class="operator">/</button>
+                <button id="multiply" class="operator">*</button>
+                <button id="minus" class="operator">-</button>
+                <button id="plus" class="operator">+</button>
+
+            </div>
+
+        </div>
+
+        <button id="equals" class="equal wide">=</button>
+
+    </div>
+
+    <script>
+        soundOne = document.getElementById('one');
+        soundTwo = document.getElementById('two');
+        soundThree = document.getElementById('three');
+        soundFour = document.getElementById('four');
+        soundFive = document.getElementById('five');
+        soundSix = document.getElementById('six');
+        soundSeven = document.getElementById('seven');
+        soundEight = document.getElementById('eight');
+        soundNine = document.getElementById('nine');
+        soundZero = document.getElementById('zero');
+        soundDot = document.getElementById('dot');
+        soundPlus = document.getElementById('plus');
+        soundMinus = document.getElementById('minus');
+        soundMultiply = document.getElementById('multiply');
+        soundDivide = document.getElementById('divide');
+        soundRoot = document.getElementById('root');
+        soundEquals = document.getElementById('equals');
+        soundDelete = document.getElementById('delete');
+        soundErase = document.getElementById('erase');
+        soundLeft = document.getElementById('left');
+        soundRight = document.getElementById('right');
+
+        soundOne.onclick = function () {
+            var sound1 = new Audio('sounds/HM(1).mp3');
+            sound1.play();
+        }
+
+        soundTwo.onclick = function () {
+            var sound2 = new Audio('sounds/HM(2).mp3');
+            sound2.play();
+        }
+
+        soundThree.onclick = function () {
+            var sound3 = new Audio('sounds/HM(3).mp3');
+            sound3.play();
+        }
+
+        soundFour.onclick = function () {
+            var sound4 = new Audio('sounds/HM(4).mp3');
+            sound4.play();
+        }
+
+        soundFive.onclick = function () {
+            var sound5 = new Audio('sounds/HM(5).mp3');
+            sound5.play();
+        }
+
+        soundSix.onclick = function () {
+            var sound6 = new Audio('sounds/HM(6).mp3');
+            sound6.play();
+        }
+
+        soundSeven.onclick = function () {
+            var sound7 = new Audio('sounds/HM(7).mp3');
+            sound7.play();
+        }
+
+        soundEight.onclick = function () {
+            var sound8 = new Audio('sounds/HM(8).mp3');
+            sound8.play();
+        }
+
+        soundNine.onclick = function () {
+            var sound9 = new Audio('sounds/HM(9).mp3');
+            sound9.play();
+        }
+
+        soundZero.onclick = function () {
+            var sound0 = new Audio('sounds/HM(0).mp3');
+            sound0.play();
+        }
+
+        soundDot.onclick = function () {
+            var soundDot = new Audio('sounds/HM(.).mp3');
+            soundDot.play();
+        }
+
+        soundPlus.onclick = function () {
+            var soundPlus = new Audio('sounds/HM(+).mp3');
+            soundPlus.play();
+        }
+
+        soundMinus.onclick = function () {
+            var soundMinus = new Audio('sounds/HM(-).mp3');
+            soundMinus.play();
+        }
+
+        soundMultiply.onclick = function () {
+            var soundMultiply = new Audio('sounds/HM(Multiply).mp3');
+            soundMultiply.play();
+        }
+
+        soundDivide.onclick = function () {
+            var soundDivide = new Audio('sounds/HM(Divide).mp3');
+            soundDivide.play();
+        }
+
+        soundRoot.onclick = function () {
+            var soundRoot = new Audio('sounds/HM(Root).mp3');
+            soundRoot.play();
+        }
+
+        soundEquals.onclick = function () {
+            var soundEquals = new Audio('sounds/HM(=).mp3');
+            soundEquals.play();
+        }
+
+        soundDelete.onclick = function () {
+            var soundDelete = new Audio('sounds/HM(Delete).mp3');
+            soundDelete.play();
+        }
+
+        soundErase.onclick = function () {
+            var soundErase = new Audio('sounds/HM(Erase).mp3');
+            soundErase.play();
+        }
+
+        soundLeft.onclick = function () {
+            var soundLeft = new Audio('sounds/HM(left).mp3');
+            soundLeft.play();
+        }
+
+        soundRight.onclick = function () {
+            var soundRight = new Audio('sounds/HM(right).mp3');
+            soundRight.play();
+        }
+
+    </script>
+
+</div>
+
+<img id="rotatingImage" src="onion.png" alt="image">
+<script>
+    let angle = 0;
+
+    setInterval(() => {
+        angle = angle === 0 ? 25 : 0;
+        document.getElementById("rotatingImage").style.transform =
+            `rotate(${angle}deg)`;
+    }, 900);
+</script>
+
+<div id="errorOverlay">
+    <img src="mikuMad.png" alt="error">
+</div>
+
+<script src="dist/app.js"></script>
+
+</body>
+</html>

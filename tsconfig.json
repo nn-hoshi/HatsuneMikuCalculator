@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "rootDir": ".",
+    "outDir": "dist"
+  },
+  "include": [
+    "app.ts"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}
